@@ -34,3 +34,8 @@ app.get("/help", (req, res) =>{
 app.get("*", (req, res) =>{ //wildcard - for standard path
     res.send("this path does not exist");
 })
+
+app.post("/", (req, res) =>{
+    res.send("you contacted a post request to root");
+    //check in hoppscotch
+})
