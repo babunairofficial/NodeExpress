@@ -20,7 +20,7 @@ app.listen(port, ()=>{
 
 //routing
 app.get("/", (req, res) =>{
-    res.send("you contacted root path");
+    res.send("Hello I am root");
 });
 
 app.get("/search", (req, res) =>{
@@ -33,9 +33,9 @@ app.get("/help", (req, res) =>{
 
 app.get("*", (req, res) =>{ //wildcard - for standard path
     res.send("this path does not exist");
-})
+});
 
 app.post("/", (req, res) =>{
     res.send("you contacted a post request to root");
     //check in hoppscotch
-})
+});
