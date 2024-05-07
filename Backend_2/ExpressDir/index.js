@@ -21,12 +21,16 @@ app.listen(port, ()=>{
 //routing
 app.get("/", (req, res) =>{
     res.send("you contacted root path");
-})
+});
 
 app.get("/search", (req, res) =>{
     res.send("you contacted search path");
-})
+});
 
 app.get("/help", (req, res) =>{
     res.send("you contacted help path");
+});
+
+app.get("*", (req, res) =>{ //wildcard - for standard path
+    res.send("this path does not exist");
 })
