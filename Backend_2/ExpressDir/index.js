@@ -10,10 +10,23 @@ app.listen(port, ()=>{
 });
 
 //Handling requests
-app.use((req, res) =>{
-    console.log("request received");
-   // res.send("this is a basic response");
+// app.use((req, res) =>{
+//     console.log("request received");
+//    // res.send("this is a basic response");
 
-    let note = "<h1>Sending Requests</h1><ul>lists of food items<li>icecream</li><li>samosa</li></ul>";
-    res.send(note); //html code as response
-});
+//     let note = "<h1>Sending Requests</h1><ul>lists of food items<li>icecream</li><li>samosa</li></ul>";
+//     res.send(note); //html code as response
+// });
+
+//routing
+app.get("/", (req, res) =>{
+    res.send("you contacted root path");
+})
+
+app.get("/search", (req, res) =>{
+    res.send("you contacted search path");
+})
+
+app.get("/help", (req, res) =>{
+    res.send("you contacted help path");
+})
