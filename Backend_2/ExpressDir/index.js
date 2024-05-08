@@ -23,19 +23,26 @@ app.get("/", (req, res) =>{
     res.send("Hello I am root");
 });
 
-app.get("/search", (req, res) =>{
-    res.send("you contacted search path");
-});
+// app.get("/search", (req, res) =>{
+//     res.send("you contacted search path");
+// });
 
-app.get("/help", (req, res) =>{
-    res.send("you contacted help path");
-});
+// app.get("/help", (req, res) =>{
+//     res.send("you contacted help path");
+// });
 
-app.get("*", (req, res) =>{ //wildcard - for standard path
-    res.send("this path does not exist");
-});
+// app.get("*", (req, res) =>{ //wildcard - for standard path
+//     res.send("this path does not exist");
+// });
 
-app.post("/", (req, res) =>{
-    res.send("you contacted a post request to root");
+// app.post("/", (req, res) =>{
+//     res.send("you contacted a post request to root");
+//     //check in hoppscotch
+// });
+
+app.get("/:username/:id", (req, res) =>{
+    let{username, id} = req.params;
+    let htmlStr = `<h1>welcome to the page of @${username}!</h1>`;
+    res.send(htmlStr);
     //check in hoppscotch
 });
