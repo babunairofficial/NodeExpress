@@ -46,3 +46,9 @@ app.get("/:username/:id", (req, res) =>{
     res.send(htmlStr);
     //check in hoppscotch
 });
+
+//query string
+app.get("/search", (req, res) =>{
+    console.log(req.query);
+    res.send("no results");
+});
